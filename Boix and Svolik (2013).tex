@@ -1,0 +1,50 @@
+\documentclass[11pt]{article}    % <--- 12pt font
+\usepackage[margin=1in]{geometry}% <--- 1 in margin
+\usepackage{setspace}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fancyvrb}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+\parindent0in
+\pagestyle{plain}
+\thispagestyle{plain}
+
+
+%% UPDATE MACRO DEFINITIONS %%
+\newcommand{\myname}{Hiromu Sugiyama}
+\newcommand{\assignment}{Wk2 Reading}
+\newcommand{\duedate}{March 31, 2025}
+% \newtheorem*{thmtype}{Theorem, Conjecture, etc}
+% \newcommand{\statement}{
+%   XXX
+% }
+% \newcommand{\myproof}{
+% The contents of your proof go here.
+% }
+
+%% DO NOT CHANGE ANYTHING BELOW THIS LINE %%
+\DeclareUnicodeCharacter{2212}{-}
+
+\begin{document}
+
+\textbf{University of Chicago}\hfill\textbf{\myname}\\[0.01in]
+\textbf{PLSC 40815: New Directions in Formal Theory}\hfill\textbf{\assignment}\\[0.01in]
+\textbf{Prof.\ Luo, Prof.\ Myerson}\hfill\textbf{\duedate}\\
+\smallskip\hrule\bigskip
+
+\doublespace                      % <--- double space
+
+\subsubsection*{Boix and Svolik (2013)}
+This paper examines the conditions under which authoritarian power-sharing succeeds, emphasizing the role of institutions and the credibility of allies' threats of rebellion. The authors argue that institutionalized interaction between rulers and allies reduces information asymmetries, leading to more stable ruling coalitions and expanding the conditions under which power-sharing is feasible. 
+
+The authors develop a formal model to analyze when and how institutions facilitate power-sharing in dictatorships. This analysis unfolds in three steps: first, they construct a baseline model of dictatorship; second, they recognize that the only credible punishment available to allies is rebellion in favor of a challenger; and third, they compare the success of power-sharing in dictatorships with and without institutions. For the sake of brevity, I here want to share the game theory portions used in the last step. The paper employs extensive-form game theory and examines a Markov perfect equilibrium to derive the conditions under which a ruler complies with a power-sharing agreement. These conditions depend on the ruler’s expected discounted payoff, the discount factor, and the probability that a rebellion succeeds.
+
+\textbf{Comment:} The paper defines a \textit{rebellion} as replacing the ruler with a challenger. However, if the challenger emerges from within the ruling coalition, the strategic dynamics change. As a phrase \textit{enemy within} suggests, an ally could form a sub-group to seize power, challenging the paper’s assumption that the challenger is a non-strategic actor with an exogenous offer $b_{C}$. Instead, an internal challenger must ensure the incentive compatibility of ally cohorts, altering the model’s simplicity. Additionally, while the paper argues institutions enhance stability, it does not explore how institutional rigidity might limit adaptability. Highly formalized structures could reduce strategic flexibility, making rulers less responsive to shifting power dynamics. Future research could examine the trade-offs between institutional stability and adaptability for a broader understanding of authoritarian power-sharing.
+
+\end{document}
