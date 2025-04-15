@@ -1,0 +1,52 @@
+\documentclass[11pt]{article}    % <--- 12pt font
+\usepackage[margin=1in]{geometry}% <--- 1 in margin
+\usepackage{setspace}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fancyvrb}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+\parindent0in
+\pagestyle{plain}
+\thispagestyle{plain}
+
+
+%% UPDATE MACRO DEFINITIONS %%
+\newcommand{\myname}{Hiromu Sugiyama}
+\newcommand{\assignment}{Wk4 Reading}
+\newcommand{\duedate}{April 14, 2025}
+% \newtheorem*{thmtype}{Theorem, Conjecture, etc}
+% \newcommand{\statement}{
+%   XXX
+% }
+% \newcommand{\myproof}{
+% The contents of your proof go here.
+% }
+
+%% DO NOT CHANGE ANYTHING BELOW THIS LINE %%
+\DeclareUnicodeCharacter{2212}{-}
+
+\begin{document}
+
+\textbf{University of Chicago}\hfill\textbf{\myname}\\[0.01in]
+\textbf{PLSC 40815: New Directions in Formal Theory}\hfill\textbf{\assignment}\\[0.01in]
+\textbf{Prof.\ Luo, Prof.\ Myerson}\hfill\textbf{\duedate}\\
+\smallskip\hrule\bigskip
+
+\onehalfspacingspacing                    % <--- 1.5 spacing in word
+\subsubsection*{Zakharov (2016)}
+\textbf{Paper Overview/Model Setup:} \\
+The paper demystifies why dictators prefer low-qualified subordinates. In doing so, it models the loyalty-competence trade-off under dictatorships. The model is based on infinitely repeated games with the following players: a dictator and several subordinates, who are either competent or incompetent. The sequence of events is as follows: the employed subordinate chooses a loyalty effort ($p_H, p_L$); every period, the dictator hires either type of subordinate; if the dictator is deposed, nature decides the type of the new dictator $r$. A few assumptions were made to derive the Markov perfect equilibrium (MPE). Competent subordinates have better outside options, which makes them less loyal than incompetent subordinates. By the nature of the Markov process, each subordinate chooses a strategy based only on the state of the game. All dictators of a given type play identical strategies. With this model, Zakharov derives a few propositions and highlights the political dynamics in authoritarian regimes, where the loyalty-competence trade-off significantly influences the recruitment of subordinates. Dictators often prefer incompetent subordinates who offer greater loyalty, which may extend their tenure despite poor governance. However, when competent subordinates are scarce or highly efficient, dictators may hire them, but their reduced loyalty due to better outside options challenges regime stability.
+
+\textbf{Comments:} \\
+In the model, the author defines that if the dictator is deposed, nature determines the type of the new dictator, $r$, by drawing it from a uniform distribution on $[1, R]$. Later, in Proposition 3, the paper suggests that the equilibrium for loyalty effort ($p_H, p_L$) continuously varies with $\alpha$ (the relative efficiency of competent subordinates in ensuring leader survival), $\delta_d$ (the exogenous, country-specific risks faced by the dictator), and $R$ (the maximum dictator type $r$). However, using $R$ as a variable in comparative statics seems unconventional.
+
+Comparative statics, in my understanding, analyzes how equilibrium outcomes change in response to variations in exogenous parameters controlled by the players. These parameters are deterministic and can be influenced by the players. In contrast, $R$ is a random variable determined by nature, which introduces uncertainty that complicates the analysis. Since $R$ is exogenously determined, its randomness does not fit the deterministic framework of comparative statics. Moreover, using $R$ implies that the agents know its value, which contradicts the uncertainty inherent in $R$. It might be more appropriate to model the expectation or distribution of $R$, focusing on how expected payoffs change based on its distribution, rather than treating it as a controllable variable.
+
+Changing $R$ from a random variable to a fixed parameter or its expected value would affect the direct consequence of Proposition 3. The original model treats $R$ as uncertain, introducing variability in the likelihood of hiring competent subordinates and their loyalty effort. If $R$ is treated deterministically (as fixed or expected), the future dictator’s decision becomes more predictable, reducing uncertainty about subordinate behavior. This would stabilize the relationship between $R$, subordinate effort, and dictator hiring choices, resulting in a more stable and less volatile equilibrium.
+\end{document}
