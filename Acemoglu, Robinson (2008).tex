@@ -1,0 +1,52 @@
+\documentclass[10.5pt]{article}    % <--- 12pt font
+\usepackage[margin=1in]{geometry}% <--- 1 in margin
+\usepackage{setspace}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fancyvrb}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+\parindent0in
+\pagestyle{plain}
+\thispagestyle{plain}
+
+
+%% UPDATE MACRO DEFINITIONS %%
+\newcommand{\myname}{Hiromu Sugiyama}
+\newcommand{\assignment}{Wk5 Reading}
+\newcommand{\duedate}{April 21, 2025}
+% \newtheorem*{thmtype}{Theorem, Conjecture, etc}
+% \newcommand{\statement}{
+%   XXX
+% }
+% \newcommand{\myproof}{
+% The contents of your proof go here.
+% }
+
+%% DO NOT CHANGE ANYTHING BELOW THIS LINE %%
+\DeclareUnicodeCharacter{2212}{-}
+
+\begin{document}
+
+\textbf{University of Chicago}\hfill\textbf{\myname}\\[0.01in]
+\textbf{PLSC 40815: New Directions in Formal Theory}\hfill\textbf{\assignment}\\[0.01in]
+\textbf{Prof.\ Luo, Prof.\ Myerson}\hfill\textbf{\duedate}\\
+\smallskip\hrule\bigskip
+
+\onespacing                   % <--- 1.5 spacing in word
+\subsubsection*{Acemoglu, Robinson (2018)}
+\textbf{Paper Overview / Model Setup:} This paper addresses a key puzzle in comparative political economy: why major changes in political institutions---such as democratization---do not always lead to corresponding changes in economic institutions or outcomes. Acemoglu and Robinson argue that the answer lies in the interaction between \textbf{de jure political power} (formally granted by institutions) and \textbf{de facto political power} (informally exercised through wealth, coercion, or organization). When elites lose de jure power, they may \textit{invest more in de facto power} to preserve their influence, sustaining elite-favored economic institutions despite political reform.\\
+
+The authors develop a dynamic model with two groups: a small elite and a large mass of citizens. Economic institutions are determined each period by the group with greater political power, which combines both de jure and de facto components. Elites, having more to gain from control, invest strategically in de facto power (e.g., lobbying, coercion). The model features endogenous regime switching between democracy and nondemocracy, but due to elite investment, economic institutions can remain persistently extractive. The paper focuses on Markov Perfect Equilibrium (MPE), and under several assumptions, derives three key results: \textbf{Proposition 1} shows that the equilibrium involves endogenous regime switching, state dependence, and partial offsetting of de jure power shifts by de facto responses. \textbf{Corollary 1} highlights the striking invariance result—if elites' de facto influence is equally effective across regimes, then economic outcomes are unchanged by democratization. \textbf{Corollary 2} shows that if democracy grants sufficient de jure power to citizens, it may become an absorbing state.\\
+
+The authors also introduce the notion of \textbf{captured democracy}, where democratic institutions persist but elites continue to control economic policies. This captures historical cases like the post-Reconstruction US South or post-colonial Latin America. Paradoxically, the model suggests that strengthening democracy may provoke greater elite resistance and entrenchment, unless reforms also constrain de facto power.\\
+
+\textbf{Comments:} The authors thoughtfully discuss their simplifying assumptions. I found particularly interesting their reflection on Assumption 3 ($\min \{\phi^E(N)f[0]\Delta R, \phi^E(D)f[-\eta]\Delta R \} > 1$), which ensures interior solutions. Relaxing it leads to corner solutions where either democracy or nondemocracy becomes absorbing—illustrated in Corollary 2. In comparative statics, a key result is that higher $\eta$ (citizens' democratic advantage) increases elite investment in de facto power and thus raises the likelihood of nondemocracy—unless Assumption 3 fails, in which case democracy consolidates. This highlights the centrality of Assumption 3 to the model's most surprising implications.\\
+\\
+One point I found unclear relates to the interpretation of $\lambda$ and $\delta$. Early in the paper, $\lambda$ is defined as the share of national income going to citizens, and $\delta$ as the fraction of potential income lost under repression. Later, the authors claim that lower $\lambda$ and $\delta$ imply higher $\Delta R$ and greater elite control. However, it's unclear how a lower $\lambda$ (implying citizens receive less income) enhances elite gains from repression, or why a lower $\delta$ reflects lower distortion costs. Further clarification on this interpretation would be helpful.
+\end{document}
