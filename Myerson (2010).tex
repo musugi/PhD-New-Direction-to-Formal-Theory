@@ -1,0 +1,49 @@
+\documentclass[10pt]{article}    % <--- 12pt font
+\usepackage[margin=1in]{geometry}% <--- 1 in margin
+\usepackage{setspace}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fancyvrb}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+\parindent0in
+\pagestyle{plain}
+\thispagestyle{plain}
+
+
+%% UPDATE MACRO DEFINITIONS %%
+\newcommand{\myname}{Hiromu Sugiyama}
+\newcommand{\assignment}{Wk6 Reading}
+\newcommand{\duedate}{April 28, 2025}
+% \newtheorem*{thmtype}{Theorem, Conjecture, etc}
+% \newcommand{\statement}{
+%   XXX
+% }
+% \newcommand{\myproof}{
+% The contents of your proof go here.
+% }
+
+%% DO NOT CHANGE ANYTHING BELOW THIS LINE %%
+\DeclareUnicodeCharacter{2212}{-}
+
+\begin{document}
+
+\textbf{University of Chicago}\hfill\textbf{\myname}\\[0.01in]
+\textbf{PLSC 40815: New Directions in Formal Theory}\hfill\textbf{\assignment}\\[0.01in]
+\textbf{Prof.\ Luo, Prof.\ Myerson}\hfill\textbf{\duedate}\\
+\smallskip\hrule\bigskip
+
+\textbf{Myerson (2010): Capitalist Investment and Political Liberalization} \par
+This paper investigates why a ruler might rationally choose to politically liberalize even though doing so increases his political risk. The core mechanism identified is that liberalization encourages greater private investment, expanding the government's tax base. Even though liberalization heightens the probability that the ruler is deposed, the increased economic benefits from enhanced investment can outweigh the political costs. \\
+The paper develops a static model where capital is assumed to be perfectly mobile, thus abstracting away from dynamic capital accumulation issues. In the basic authoritarian setting, capitalist investment is constrained by the risk of expropriation: rulers are tempted to seize assets, which deters investment. The model introduces political liberalization, captured by a probability $\lambda$ that the ruler is replaced if he attempts expropriation. \\
+False-alarm political scandals occur at a Poisson rate $\psi$, adding exogenous risk. Under liberalization, the ruler discounts future payoffs at a rate $\rho + \psi \lambda$. The model extends to several parametric cases, including the effects of resource endowments and independent revenue sources, and analyzes scenarios where factor mobility leads to coexistence of liberal and authoritarian regimes in general equilibrium.\\
+The model reveals several important insights. First, a resource curse emerges: increases in fixed resource endowments can paradoxically reduce investment and decrease the ruler's revenue by tightening the expropriation incentive constraint. Second, the ruler's incentive to liberalize is nonmonotonic with respect to resource endowments: it is strongest at intermediate levels. When resources are scarce, rulers can credibly commit to respecting property rights without liberalization; when resources are abundant, the political risks associated with liberalization outweigh its economic benefits. Third, introducing independent sources of government revenue diminishes the optimal degree of liberalization and leads to reduced equilibrium investment, as rulers become less reliant on private sector prosperity. Finally, in general equilibrium with mobile labor, liberal and authoritarian regimes can coexist, with labor market adjustments allowing different political regimes to persist side by side.\\
+\\
+\textbf{Comments:} A notable modeling assumption concerns the use of a Poisson process to represent the occurrence of false-alarm political scandals at rate $\psi$. In the setup, under a regime with liberalization probability $\lambda$, the ruler faces a probability of replacement $\psi \varepsilon \lambda$ in any short interval $\varepsilon$. Two points I want to discuss. First, although the Poisson process is a natural way to model random events occurring at a constant rate, it is not clear that the full stochastic properties of a Poisson process are necessary for the core results, particularly for Theorem 2. The essential requirement appears to be a constant hazard rate, rather than memorylessness or independent increments. Thus, a broader class of processes might have sufficed without materially affecting the conclusions. Second, the introduction of the small time increment $\varepsilon$ appears superfluous, given that the key variable influencing political risk is the average scandal rate $\psi$. The explicit mention of $\varepsilon$ suggests a continuous-time structure that is not otherwise utilized. A more parsimonious presentation could have specified the adjustment to the discount rate directly in terms of $\psi$ without invoking $\varepsilon$.\\
+A second conceptual comment concerns the interpretation of discounting in an otherwise static model. The discount rates (e.g. capitalists’ discount rate $r$, the ruler’s discount rate $\rho$), I initially thought, arise in dynamic contexts, yet here they are embedded within a single-period framework. This modeling choice is best understood as a way to incorporate the effects of endogenous and exogenous risks---such as regime instability, political shocks, or economic collapse---into a static environment. Thus, discounting reflects the expected durability of payoffs rather than intertemporal preferences per se. It serves as a reduced-form device to embed dynamic uncertainty within the static decision structure, focusing attention on the comparative statics of liberalization incentives without introducing dynamic complexities.
+\end{document}
