@@ -1,0 +1,56 @@
+\documentclass[10pt]{article}    % <--- 12pt font
+\usepackage[margin=1in]{geometry}% <--- 1 in margin
+\usepackage{setspace}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fancyvrb}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+\parindent0in
+\pagestyle{plain}
+\thispagestyle{plain}
+
+
+%% UPDATE MACRO DEFINITIONS %%
+\newcommand{\myname}{Hiromu Sugiyama}
+\newcommand{\assignment}{Wk8 Reading}
+\newcommand{\duedate}{May 12, 2025}
+% \newtheorem*{thmtype}{Theorem, Conjecture, etc}
+% \newcommand{\statement}{
+%   XXX
+% }
+% \newcommand{\myproof}{
+% The contents of your proof go here.
+% }
+
+%% DO NOT CHANGE ANYTHING BELOW THIS LINE %%
+\DeclareUnicodeCharacter{2212}{-}
+
+\begin{document}
+
+\textbf{University of Chicago}\hfill\textbf{\myname}\\[0.01in]
+\textbf{PLSC 40815: New Directions in Formal Theory}\hfill\textbf{\assignment}\\[0.01in]
+\textbf{Prof.\ Luo, Prof.\ Myerson}\hfill\textbf{\duedate}\\
+\smallskip\hrule\bigskip
+
+\textbf{Acemoglu and Robinson (2000): Why Did the West Extend the Franchise? Democracy, Inequality, and Growth in Historical Perspective} \par
+\\
+This paper explores why elites would voluntarily extend the voting franchise despite the likelihood of increased taxation and redistribution. The authors argue that democratization is a strategic response to the threat of revolution. Temporary redistribution is noncredible, but franchise extension offers a permanent transfer of political power to the poor majority, making future redistribution credible. This mechanism also explains the decline in inequality during development, offering a political basis for the Kuznets curve.
+
+The model is structured as a dynamic Markov Perfect Equilibrium (MPE) game between two groups: the rich elite and the poor majority. The elite can either redistribute income temporarily or extend the franchise permanently. The poor may revolt when a low-cost revolution shock (\( \mu^h \)) occurs. If the elite fail to credibly commit to redistribution, they must democratize to avoid revolution. The franchise, once granted, is irreversible and transfers policymaking to the median (poor) voter.
+
+The equilibrium depends on the probability \( q \) of revolutionary threat. When \( q < q^* \), redistribution is not credible, and the elite extend the franchise. When \( q > q^* \), the elite can maintain power by redistributing in periods of unrest. The model is then extended to include endogenous capital accumulation: under elite control, inequality grows as only the rich invest. Eventually, inequality increases the threat of revolution, prompting democratization. Once the poor gain access to redistribution and invest, inequality declines—tracing out a political Kuznets curve.
+
+Historical cases support the model’s logic. Britain, France, and Sweden experienced major reforms after periods of unrest, consistent with the idea that franchise extension was a strategic concession to avoid revolution. The authors contrast this explanation with weaker alternatives based on shifting values, elite party competition, or middle-class pressure.
+
+\vspace{1em}
+\textbf{Comments:} \\
+To begin with, I want to comment on the assumption that, if a revolution is attempted, it always succeeds. This assumption appears motivated by the authors’ intent to focus sharply on the credibility problem of redistribution. By treating the revolution threat as a deterministic outside option, the model isolates the elite’s incentive to extend the franchise as a commitment device. However, this strong assumption may undercut the paper’s main contribution—explaining the elite’s paradoxical decision to democratize. If the success of revolution were probabilistic—denoted \( \pi(\mu) \in (0,1) \), perhaps depending on state capacity or collective action—then the value of revolution to the poor becomes $V_p(R) = \frac{\pi(\mu) \mu A H}{\lambda (1 - \beta)}.$ In such a setting, the poor’s threat is less credible, and elites may find temporary redistribution a viable strategy, even under repeated unrest. This would weaken the elite’s incentive to permanently extend the franchise. In other words, the assumption of certain revolution success helps sharpen the logic of democratization as a strategic concession, but at the risk of overstating the inevitability of that concession relative to historical cases where sustained unrest did not lead to reform.
+
+A second assumption concerns the unity of the elite. The model treats all rich agents as having identical preferences and acting collectively. This simplifies the strategic environment and supports the binary institutional choice structure at the heart of the paper. Yet, it also sidelines potential internal conflicts that could themselves drive reform. If we instead introduced heterogeneity—say, two elite factions with capital holdings \( h^r_1 \), \( h^r_2 \) and respective payoffs \( V^r_1(\cdot) \), \( V^r_2(\cdot) \)—we might find cases where one faction prefers democratization as a way to outmaneuver the other, independent of mass pressure. In such settings, franchise extension may emerge even in the absence of a credible revolutionary threat. While this extension may diffuse the model’s emphasis on popular threat as the reform driver, it could better reflect historical episodes where intra-elite rivalry played a central role. As a foundational theory, the model is justified in abstracting from these dynamics, but relaxing these assumptions in future work could strengthen the empirical resonance of the core mechanism.
+\end{document}

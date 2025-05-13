@@ -1,0 +1,55 @@
+\documentclass[10pt]{article}    % <--- 12pt font
+\usepackage[margin=1in]{geometry}% <--- 1 in margin
+\usepackage{setspace}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fancyvrb}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+\parindent0in
+\pagestyle{plain}
+\thispagestyle{plain}
+
+
+%% UPDATE MACRO DEFINITIONS %%
+\newcommand{\myname}{Hiromu Sugiyama}
+\newcommand{\assignment}{Wk7 Reading}
+\newcommand{\duedate}{May 5, 2025}
+% \newtheorem*{thmtype}{Theorem, Conjecture, etc}
+% \newcommand{\statement}{
+%   XXX
+% }
+% \newcommand{\myproof}{
+% The contents of your proof go here.
+% }
+
+%% DO NOT CHANGE ANYTHING BELOW THIS LINE %%
+\DeclareUnicodeCharacter{2212}{-}
+
+\begin{document}
+
+\textbf{University of Chicago}\hfill\textbf{\myname}\\[0.01in]
+\textbf{PLSC 40815: New Directions in Formal Theory}\hfill\textbf{\assignment}\\[0.01in]
+\textbf{Prof.\ Luo, Prof.\ Myerson}\hfill\textbf{\duedate}\\
+\smallskip\hrule\bigskip
+
+\textbf{Lagunoff (2024): A Dynamic Model of Authoritarian Social Control} \par
+\\
+This paper addresses the question of how authoritarian regimes achieve social conformity and what the long-term social and economic consequences of their control mechanisms are. The core mechanism identifies that wealth inequality increases over time as the regime targets poorer or more dissident citizens with harsher punishments. In regimes with high state capacity, the authority can allow citizens to accumulate wealth, leading to social conformity and balanced growth. In contrast, unstable regimes with low capacity tend to create a divided society of wealthy "lackeys" and destitute citizens. \\
+The paper develops a dynamic model where both the authority (i.e., the authoritarian regime) and citizens make decisions about compliance, based on rewards and punishments. Assuming there is no independent judiciary to limit the authority, and the authority cannot commit to a long-term rule, strategies are optimized dynamically each period. Thus, the author bases the model on Markov Perfect Equilibrium, where strategies are contingent on the current state of wealth and behavior signals. The model comes with three premises: the authority attempts to impel citizens towards their ideological ideals for its benefit; the authority can implement laws differently across citizens; the authority can only commit for the short-run (due to re-optimization every period). \\
+The model implies several important insights. First, the authors found that citizens have incentives to comply both due to the immediate wealth effects and long-term accumulation. The authority's compliance rules directly influence the degree to which citizens align with its desired behaviors. Second, the authority faces a dynamic trade-off between immediate control and long-term stability. The authority adjusts its strategies to balance these two objectives. Third, citizens with wealth above a certain threshold reach full compliance and maintain it indefinitely, creating an absorbing region in which compliance is stable and irreversible once wealth has accumulated. Fourth, once a citizen's wealth exceeds a critical threshold, they will always comply, resulting in stable and predictable long-term compliance. Fifth, the time it takes for a citizen to reach full compliance depends on their wealth, patience, and the authority's strategies. Lastly, impatient authorities prioritize immediate compliance through harsh punishments and minimal rewards, failing to incentivize long-term stable compliance. Further, the author explains the comparative statics and the extension of the baseline model. In a draconian equilibrium (i.e., harsher punishments to enforce compliance), compliance is achieved quickly, but long-term stability is compromised, leading to greater wealth inequality, social division, and unstable governance. In the case of rapacious authoritarianism (i.e., more greedy authority), citizens increasingly resist the regime, and the level of compliance is lower across all citizens. \\
+\textbf{Comments:} To begin with, I would like to discuss the setting of punishment. According to the paper, citizen \(i\) receives the punishment (\(w_i\), \(P\)) if \(\mathcal{T}_i(w_i,x) > 0\) and the reward ($R$) if not. The feasible compliance rule satisfies: \(-R \leq \mathcal{T}_i(w_i,x) \leq w_i + P\), where \(w_i\) refers to confiscation and \(P\) refers to punishment that exceeds the \(w_i\) (e.g., imprisonment). The addition of \(P\) gives a thicker interpretation to the equilibrium compliance rule. Yet, I believe the author fails to make use of \(P\) in the analysis of the model. If \(P\) is not related to the analysis and is merely included to portray non-confiscation punishments, I think the author can simply exclude \(P\) and explain that the results do not change with or without the consideration of such punishments (although the expression \(P\) is somewhat used in the context of the draconian equilibrium). Since the main result of the paper produces the compliance rules highly tailored to wealth and ideology, I was not convinced by the necessity of adding non-confiscation punishments. One might imagine a more complicated version with the inclusion of \(P\) where the experience of punishments accelerates conformity. However, this would ruin the Markov assumption, as it considers past information to account for the current state. In either case, there seems to be no necessity for adding \(P\) in the model. \\
+The author makes an effort to work on the comparative statics of the parameters and the extension of the baseline dynamic model. I consider this very crucial, as the main target of the paper is to uncover the authority’s achievement of social conformity through its controls. Therefore, this analysis of different types of authoritarian regimes helps reinforce the intent of the paper. 
+
+\pagebreak
+\textbf{Class Discussion:} Constraint relaxation effect and dynamic game \\
+\begin{itemize}
+    \item Discussion of "frontloading" payment meaningless when payment doesn't affect dictator's utility
+    \item Under this model's assumption , it would be better to skip the dynamic game, pay citizens to boost their wealth, and enjoy a population of compliant, wealthy citizens
+\end{itemize}
+\end{document}
