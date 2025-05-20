@@ -1,0 +1,50 @@
+\documentclass[10pt]{article}    % <--- 12pt font
+\usepackage[margin=1in]{geometry}% <--- 1 in margin
+\usepackage{setspace}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fancyvrb}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+\parindent0in
+\pagestyle{plain}
+\thispagestyle{plain}
+
+
+%% UPDATE MACRO DEFINITIONS %%
+\newcommand{\myname}{Hiromu Sugiyama}
+\newcommand{\assignment}{Wk9 Reading}
+\newcommand{\duedate}{May 19, 2025}
+% \newtheorem*{thmtype}{Theorem, Conjecture, etc}
+% \newcommand{\statement}{
+%   XXX
+% }
+% \newcommand{\myproof}{
+% The contents of your proof go here.
+% }
+
+%% DO NOT CHANGE ANYTHING BELOW THIS LINE %%
+\DeclareUnicodeCharacter{2212}{-}
+
+\begin{document}
+
+\textbf{University of Chicago}\hfill\textbf{\myname}\\[0.01in]
+\textbf{PLSC 40815: New Directions in Formal Theory}\hfill\textbf{\assignment}\\[0.01in]
+\textbf{Prof.\ Luo, Prof.\ Myerson}\hfill\textbf{\duedate}\\
+\smallskip\hrule\bigskip
+
+\textbf{Levin (2003): Relational Incentive Constracts} \par
+\\
+This paper addresses the central question of how optimal incentive contracts can be designed when formal enforcement is limited or absent—that is, when parties must rely on relational contracts that are self-enforcing through repeated interaction. Standard incentive theory, while powerful in addressing problems of moral hazard and adverse selection, typically assumes that contracts can be perfectly enforced by third parties such as courts. In practice, however, many important aspects of performance—such as effort, teamwork, or initiative—are difficult to verify or contract upon. As a result, real-world incentive structures often depend not on legal enforceability but on the value of maintaining long-term relationships.
+
+To study this, Levin develops a repeated principal-agent model in which compensation consists of both a fixed salary and a discretionary (non-enforceable) performance-based transfer. The agent and principal interact over an infinite horizon, and relational contracts are modeled as Perfect Public Equilibria (PPE) of the repeated game. Crucially, the relational contract must be self-enforcing: both parties must find it optimal to comply with the agreed-upon transfers, knowing that any deviation would trigger future punishment, such as the breakdown of the relationship. A key innovation of the paper is to show that, under risk neutrality, the optimal relational contract can take a stationary form—where the same incentive scheme is repeated each period. This result hinges on the substitutability between current payments and continuation utilities: dynamic incentives can be replicated by static transfers, allowing the principal to reward or punish performance without adjusting the structure of future contracts.
+
+Levin formally characterizes the set of implementable contracts using a dynamic enforcement constraint, which limits the variation in contingent payments to the present discounted value of the surplus from the relationship. He then applies this framework to three canonical informational environments. Under hidden information, where the agent privately observes cost shocks, Levin shows that optimal contracts involve pooling or partial pooling of types and may induce inefficient effort choices—even when standard screening models predict full separation. Under moral hazard, where the agent’s effort is unobservable, the optimal contract compresses the performance signal into a binary structure: bonuses are awarded only if observed output exceeds a threshold. Finally, when performance is evaluated subjectively and only the principal observes the signal, the optimal contract relies on termination threats to discipline both truthful reporting by the principal and effort by the agent, resulting in simple but conflict-prone arrangements.
+\\
+\textbf{Comments:} A central result of this paper is that optimal relational contracts can take a stationary form, with the same incentive scheme repeated in each period. This finding is brought by, under risk neutrality, current payments and continuation utilities are perfect substitutes—allowing dynamic incentives to be fully implemented through static transfers. However, this reliance on risk neutrality inherits a key limitation of the standard incentive theory that the paper aims to critique. In practice, agents are often risk-averse, in which case continuation payoffs and immediate transfers are no longer fungible: incentives that rely solely on volatile current bonuses may impose utility costs that cannot be replicated by flat future promises. Formally, if the agent’s utility is concave (e.g., $u(x) = \sqrt{x}$), the equivalence $u(b_t) + \delta V_{t+1} \sim u(b_t') + \delta V_{t+1}'$ fails unless $b_t = b_t'$, undermining the validity of substituting continuation utilities for present payments. Furthermore, the stationarity result presumes perfect public monitoring, whereby both parties observe a shared signal (e.g., output $y_t$) each period. Yet many real-world relational contracts—particularly those relying on subjective performance or collaborative effort—are sustained under private or noisy monitoring, where outcomes may be observed individually or are imperfectly informative about performance. In such environments, sustaining cooperation typically requires non-stationary strategies that evolve over time, reflecting accumulated performance signals and shifting expectations. Strategies may condition future behavior on informal assessments, patterns of past effort, or even internal norms, none of which are easily embedded in static contract terms. Thus, while Levin’s result elegantly simplifies the contract design problem under self-enforcement, it does so by abstracting from two key frictions—risk sensitivity and imperfect observability—that are often at the core of the environments where relational contracts emerge as the primary governance tool.
+\end{document}
